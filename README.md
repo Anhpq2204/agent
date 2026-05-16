@@ -2,6 +2,8 @@
 
 An intelligent, full-cycle research agent built with **LangGraph** and the **Gemini API** (Google Generative AI). This agent autonomously performs comprehensive literature reviews on computational biology and gene expression topics.
 
+[🎥 **Watch the Video Demo here!**](https://drive.google.com/file/d/15XLiCAQYVP9ggNi1KO-9kJXK2APz_x7S/view?usp=sharing)
+
 ## 🚀 Features
 
 - **Automated Paper Retrieval:** Uses the Europe PMC API to fetch real, verifiable academic papers (including PubMed links).
