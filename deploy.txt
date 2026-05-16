@@ -1,0 +1,54 @@
+
+i want to use langgraph framework and gemini api key
+I've updated the architecture to use the LangGraph framework and the official Gemini API (google-generativeai SDK), exactly as you requested.
+
+The implementation has been written from scratch and saved to c:\Users\Admin\Desktop\agent\research_agent.py. The project uses a StateGraph with individual nodes for retrieval, analysis, comparison, review generation, ideation, and final compilation.
+
+A walkthrough.md artifact is now available detailing how the components work together and how you can run the pipeline locally (just remember to fill in your API key in the newly created .env file).
+
+Please let me know if you need any further modifications or if you're ready to test it out!
+
+Walkthrough
+requirements.txt
+research_agent.py
+2:21 PM
+i want each agent in a seperarte file
+I have refactored the codebase to place each agent node into its own separate file.
+
+The single research_agent.py script has been removed, and the project is now structured into modular components:
+
+config.py: API key setup and Gemini model configuration.
+schemas.py: Pydantic schema definitions.
+state.py: GraphState TypedDict definition.
+retriever.py, analyzer.py, comparator.py, reviewer.py, ideation.py, compiler.py: The individual LangGraph agent nodes.
+main.py: The orchestrator that builds the graph from these nodes and runs it.
+You can now run the pipeline by executing python main.py (after installing dependencies and configuring your .env file). The walkthrough artifact has also been updated to reflect this new modular structure.
+
+config.py
+schemas.py
+state.py
+retriever.py
+analyzer.py
+comparator.py
+reviewer.py
+ideation.py
+compiler.py
+main.py
+2:23 PM
+create a streamlit app for demo on localhost
+I've created a Streamlit web app for the agent.
+
+The new file app.py allows you to interactively configure the research topic, choose the number of papers, and execute the LangGraph pipeline while tracking real-time status updates directly in your browser.
+
+I also added streamlit to the requirements.txt.
+
+To run the demo locally, use the following commands in your terminal:
+
+bash
+pip install -r requirements.txt
+streamlit run app.py
+This will automatically open the interactive demo in your default browser on localhost:8501.
+
+app.py
+requirements.txt
+2:26 PM
